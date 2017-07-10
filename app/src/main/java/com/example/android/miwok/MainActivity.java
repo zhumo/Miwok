@@ -15,14 +15,10 @@
  */
 package com.example.android.miwok;
 
-import android.content.Intent;
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,22 +31,22 @@ public class MainActivity extends AppCompatActivity {
 
         // Set click listener for numbers
         TextView numbersButton = (TextView) findViewById(R.id.numbers);
-        NumbersClickListener numbersClickListener = new NumbersClickListener();
+        CategoryClickListener numbersClickListener = new CategoryClickListener(NumbersActivity.class);
         numbersButton.setOnClickListener(numbersClickListener);
 
         // Set click listener for family members
         TextView familyMembersButton = (TextView) findViewById(R.id.family_members);
-        FamilyMembersClickListener familyMembersClickListener = new FamilyMembersClickListener();
+        CategoryClickListener familyMembersClickListener = new CategoryClickListener(FamilyMembersActivity.class);
         familyMembersButton.setOnClickListener(familyMembersClickListener);
 
         // Set click listener for colors
         TextView colorsButton = (TextView) findViewById(R.id.colors);
-        ColorsClickListener colorsClickListener = new ColorsClickListener();
-        colorsButton.setOnClickListener(colorsClickListener);
+        CategoryClickListener categoryClickListener = new CategoryClickListener(ColorsActivity.class);
+        colorsButton.setOnClickListener(categoryClickListener);
 
         // Set click listener for phrases
         TextView phrasesButton = (TextView) findViewById(R.id.phrases);
-        PhrasesClickListener phrasesClickListener = new PhrasesClickListener();
+        CategoryClickListener phrasesClickListener = new CategoryClickListener(PhrasesActivity.class);
         phrasesButton.setOnClickListener(phrasesClickListener);
     }
 }
