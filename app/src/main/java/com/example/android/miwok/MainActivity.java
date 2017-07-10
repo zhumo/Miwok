@@ -19,6 +19,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,25 +32,25 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
-    }
 
-    public void openNumbersList(View view) {
-        Intent numbersListIntent = new Intent(this, NumbersActivity.class);
-        startActivity(numbersListIntent);
-    }
+        // Set click listener for numbers
+        TextView numbersButton = (TextView) findViewById(R.id.numbers);
+        NumbersClickListener numbersClickListener = new NumbersClickListener();
+        numbersButton.setOnClickListener(numbersClickListener);
 
-    public void openFamilyMembersList(View view) {
-        Intent familyMembersListIntent = new Intent(this, FamilyMembersActivity.class);
-        startActivity(familyMembersListIntent);
-    }
+        // Set click listener for family members
+        TextView familyMembersButton = (TextView) findViewById(R.id.family_members);
+        FamilyMembersClickListener familyMembersClickListener = new FamilyMembersClickListener();
+        familyMembersButton.setOnClickListener(familyMembersClickListener);
 
-    public void openColorsList(View view) {
-        Intent colorsListIntent = new Intent(this, ColorsActivity.class);
-        startActivity(colorsListIntent);
-    }
+        // Set click listener for colors
+        TextView colorsButton = (TextView) findViewById(R.id.colors);
+        ColorsClickListener colorsClickListener = new ColorsClickListener();
+        colorsButton.setOnClickListener(colorsClickListener);
 
-    public void openPhrasesList(View view) {
-        Intent categoriesListIntent = new Intent(this, PhrasesActivity.class);
-        startActivity(categoriesListIntent);
+        // Set click listener for phrases
+        TextView phrasesButton = (TextView) findViewById(R.id.phrases);
+        PhrasesClickListener phrasesClickListener = new PhrasesClickListener();
+        phrasesButton.setOnClickListener(phrasesClickListener);
     }
 }
