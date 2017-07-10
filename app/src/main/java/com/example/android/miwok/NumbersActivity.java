@@ -17,27 +17,20 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
 
-        ArrayList<String> numbers = new ArrayList<String>();
-        numbers.add("one");
-        numbers.add("two");
-        numbers.add("three");
-        numbers.add("four");
-        numbers.add("five");
-        numbers.add("six");
-        numbers.add("seven");
-        numbers.add("eight");
-        numbers.add("nine");
-        numbers.add("ten");
+        ArrayList<Word> numbers = new ArrayList<Word>();
+        numbers.add(new Word("lutti", "one"));
+        numbers.add(new Word("otiiko", "two"));
+        numbers.add(new Word("tolookosu", "three"));
+        numbers.add(new Word("oyyisa", "four"));
+        numbers.add(new Word("massokka", "five"));
+        numbers.add(new Word("temmokka", "six"));
+        numbers.add(new Word("kenekaku", "seven"));
+        numbers.add(new Word("kawinta", "eight"));
+        numbers.add(new Word("wo'e", "nine"));
+        numbers.add(new Word("na'aacha", "ten"));
 
-        ArrayAdapter<String> numbersAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, numbers);
+        WordAdapter numbersAdapter = new WordAdapter(this, numbers);
         ListView numbersList = (ListView) findViewById(R.id.numbers_list);
         numbersList.setAdapter(numbersAdapter);
-
-//        LinearLayout numbersList = (LinearLayout) findViewById(R.id.numbers_list);
-//        for (String number : numbers) {
-//            TextView numberView = new TextView(this);
-//            numberView.setText(number);
-//            numbersList.addView(numberView);
-//        }
     }
 }
