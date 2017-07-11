@@ -3,19 +3,31 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/miwok_word"
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Miwok word"/>
-    <TextView
-        android:id="@+id/default_word"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="Default word"/>
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginEnd="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/miwok_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Miwok word"/>
+        <TextView
+            android:id="@+id/default_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Default word"/>
+    </LinearLayout>
 
 </LinearLayout>
