@@ -9,7 +9,8 @@ import android.support.annotation.Nullable;
 public class Word {
     private String _miwokWord;
     private String _defaultTranslation;
-    private int _imageResourceID;
+    private int _imageResourceID = NO_IMAGE;
+    private static final int NO_IMAGE = -1;
 
     public Word(String miwokWord, String defaultTranslation) {
         _miwokWord = miwokWord;
@@ -25,5 +26,5 @@ public class Word {
     public String getMiwokWord() { return _miwokWord; }
     public String getDefaultTranslation() { return _defaultTranslation; }
     public int getImageResourceID() { return _imageResourceID; }
-    public boolean hasImage() { return _imageResourceID != 0; }
+    public boolean hasImage() { return _imageResourceID != NO_IMAGE; }
 }
