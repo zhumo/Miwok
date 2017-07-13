@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -21,9 +23,11 @@ import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter<Word> {
     ArrayList<Word> numbers;
+    int mcategoryColorID;
 
-    public WordAdapter(Context context, ArrayList<Word> numbers) {
+    public WordAdapter(Context context, ArrayList<Word> numbers, int categoryColorID) {
         super(context, 0, numbers);
+        mcategoryColorID = categoryColorID;
     }
 
     @Override
@@ -34,6 +38,11 @@ public class WordAdapter extends ArrayAdapter<Word> {
                     R.layout.translation_layout, parent, false
             );
         }
+
+        // Set the color of the row.
+        LinearLayout translationTextView = (LinearLayout) translationView.findViewById(R.id.translation_text);
+        int color = ContextCompat.getColor(getContext(), mcategoryColorID);
+        translationTextView.setBackgroundColor(color);
 
         Word currentWord = getItem(position);
 

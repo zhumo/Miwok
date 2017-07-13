@@ -2,32 +2,25 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="16dp">
+    style="@style/TranslationStyle">
 
     <ImageView
         android:id="@+id/translation_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
-        android:layout_marginEnd="16dp"/>
+        style="@style/TranslationImageStyle"/>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/translation_text"
+        style="@style/TranslationTextStyle"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/miwok_word"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/MiwokWordStyle"
             tools:text="Miwok word"/>
         <TextView
             android:id="@+id/default_word"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/DefaultWordStyle"
             tools:text="Default word"/>
     </LinearLayout>
 

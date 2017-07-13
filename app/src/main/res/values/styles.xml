@@ -30,4 +30,40 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
     </style>
+
+    <style name="TranslationStyle">
+        <item name="android:layout_height">@dimen/list_item_height</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="TranslationImageStyle">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/list_item_height</item>
+        <item name="android:background">@color/tan_background</item>
+    </style>
+
+    <style name="TranslationTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingStart">16dp</item>
+    </style>
+
+    <style name="MiwokWordStyle">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="DefaultWordStyle">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">top</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 </resources>
