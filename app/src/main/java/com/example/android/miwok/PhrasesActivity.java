@@ -6,7 +6,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class PhrasesActivity extends AppCompatActivity {
+public class PhrasesActivity extends CategoryActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

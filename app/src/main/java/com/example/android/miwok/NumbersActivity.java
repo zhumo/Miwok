@@ -6,7 +6,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class NumbersActivity extends AppCompatActivity {
+public class NumbersActivity extends CategoryActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

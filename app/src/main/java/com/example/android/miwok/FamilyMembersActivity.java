@@ -13,12 +13,11 @@ import java.util.ArrayList;
 
 import static java.security.AccessController.getContext;
 
-public class FamilyMembersActivity extends AppCompatActivity {
+public class FamilyMembersActivity extends CategoryActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.translations_list);
 
         ArrayList<Word> familyMembers = new ArrayList<Word>();
         familyMembers.add(new Word("әpә", "father", R.drawable.family_father, R.raw.family_father));
