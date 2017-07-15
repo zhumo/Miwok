@@ -14,6 +14,12 @@ public class TranslationListItemClickListener implements AdapterView.OnItemClick
         WordAdapter adapter = (WordAdapter) parent.getAdapter();
         Word word = adapter.getItem(position);
         MediaPlayer player = MediaPlayer.create(parent.getContext(), word.getAudioResourceID());
+        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer player) {
+                player.release();
+            }
+        });
         player.start();
     }
 }

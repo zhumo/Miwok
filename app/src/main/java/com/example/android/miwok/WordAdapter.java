@@ -37,7 +37,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         View translationView = convertView;
         if (translationView == null) {
             translationView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.translation_layout, parent, false
+                R.layout.translation_layout, parent, false
             );
         }
 
