@@ -20,4 +20,13 @@ public class CategoryActivity extends AppCompatActivity {
 
     public void setPlayer(MediaPlayer inputtedPlayer) { player = inputtedPlayer; }
     public MediaPlayer getPlayer() { return player; }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if(player != null) {
+            player.release();
+            player = null;
+        }
+    }
 }
