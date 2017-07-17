@@ -22,31 +22,54 @@
     android:orientation="vertical"
     tools:context="com.example.android.miwok.MainActivity">
 
-    <TextView
-        android:id="@+id/numbers"
-        style="@style/CategoryStyle"
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/category_numbers"
-        android:text="@string/category_numbers" />
+        >
+        <Button
+            android:id="@+id/numbers"
+            style="@style/CategoryStyle"
+            android:text="@string/category_numbers"
+            android:background="?android:selectableItemBackground"/>
+    </FrameLayout>
 
-    <TextView
-        android:id="@+id/family_members"
-        style="@style/CategoryStyle"
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/category_family_members"
-        android:text="@string/category_family_members"
-        android:onClick="openFamilyMembersList"/>
+        >
+        <Button
+            android:id="@+id/family_members"
+            style="@style/CategoryStyle"
+            android:background="?android:selectableItemBackground"
+            android:text="@string/category_family_members"
+            android:onClick="openFamilyMembersList"/>
+    </FrameLayout>
 
-    <TextView
-        android:id="@+id/colors"
-        style="@style/CategoryStyle"
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/category_colors"
-        android:text="@string/category_colors"
-        android:onClick="openColorsList"/>
+        >
+        <Button
+            android:id="@+id/colors"
+            style="@style/CategoryStyle"
+            android:background="?android:selectableItemBackground"
+            android:text="@string/category_colors"
+            android:onClick="openColorsList"/>
+    </FrameLayout>
 
-    <TextView
-        android:id="@+id/phrases"
-        style="@style/CategoryStyle"
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/category_phrases"
-        android:text="@string/category_phrases"
-        android:onClick="openPhrasesList"/>
-
+        >
+        <Button
+            android:id="@+id/phrases"
+            style="@style/CategoryStyle"
+            android:background="?android:selectableItemBackground"
+            android:text="@string/category_phrases"
+            android:onClick="openPhrasesList"/>
+    </FrameLayout>
 </LinearLayout>
