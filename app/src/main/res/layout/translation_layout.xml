@@ -24,4 +24,10 @@
             tools:text="Default word"/>
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_play_arrow"
+        style="@style/PlayButton" />
+
 </LinearLayout>

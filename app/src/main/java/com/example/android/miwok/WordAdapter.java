@@ -44,7 +44,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // Set the color of the row.
         LinearLayout translationTextView = (LinearLayout) translationView.findViewById(R.id.translation_text);
         int color = ContextCompat.getColor(getContext(), mcategoryColorID);
-        translationTextView.setBackgroundColor(color);
+        translationView.setBackgroundColor(color);
 
         Word currentWord = getItem(position);
 
