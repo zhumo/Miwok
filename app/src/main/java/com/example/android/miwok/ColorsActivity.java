@@ -24,9 +24,9 @@ public class ColorsActivity extends CategoryActivity {
         numbers.add(new Word("ṭopiisә", "dusty yellow", R.drawable.color_dusty_yellow, R.raw.color_dusty_yellow));
         numbers.add(new Word("chiwiiṭә", "mustard yellow", R.drawable.color_mustard_yellow, R.raw.color_mustard_yellow));
 
-        WordAdapter colorsAdapter = new WordAdapter(this, numbers, R.color.category_colors);
+        adapter = new WordAdapter(this, numbers, R.color.category_colors);
         ListView colorsList = (ListView) findViewById(R.id.translations_list);
-        colorsList.setAdapter(colorsAdapter);
-        colorsList.setOnItemClickListener(new TranslationListItemClickListener());
+        colorsList.setAdapter(adapter);
+        colorsList.setOnItemClickListener(translationListItemClickListener);
     }
 }

@@ -31,9 +31,9 @@ public class FamilyMembersActivity extends CategoryActivity {
         familyMembers.add(new Word("ama", "grandmother", R.drawable.family_grandmother, R.raw.family_grandmother));
         familyMembers.add(new Word("paapa", "grandfather", R.drawable.family_grandfather, R.raw.family_grandfather));
 
-        WordAdapter familyMembersAdapter = new WordAdapter(this, familyMembers, R.color.category_family_members);
+        adapter = new WordAdapter(this, familyMembers, R.color.category_family_members);
         ListView familyMembersList = (ListView) findViewById(R.id.translations_list);
-        familyMembersList.setAdapter(familyMembersAdapter);
-        familyMembersList.setOnItemClickListener(new TranslationListItemClickListener());
+        familyMembersList.setAdapter(adapter);
+        familyMembersList.setOnItemClickListener(translationListItemClickListener);
     }
 }

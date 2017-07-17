@@ -25,9 +25,9 @@ public class PhrasesActivity extends CategoryActivity {
         phrases.add(new Word("yoowutis", "Let's go", R.raw.phrase_lets_go));
         phrases.add(new Word("әnni'nem", "Come here.", R.raw.phrase_come_here));
 
-        WordAdapter phrasesAdapter = new WordAdapter(this, phrases, R.color.category_phrases);
+        WordAdapter adapter = new WordAdapter(this, phrases, R.color.category_phrases);
         ListView phrasesList = (ListView) findViewById(R.id.translations_list);
-        phrasesList.setAdapter(phrasesAdapter);
-        phrasesList.setOnItemClickListener(new TranslationListItemClickListener());
+        phrasesList.setAdapter(adapter);
+        phrasesList.setOnItemClickListener(translationListItemClickListener);
     }
 }
